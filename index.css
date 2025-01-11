@@ -1,37 +1,47 @@
-.login-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
+body {
+    font-family: Arial, sans-serif;
     background-color: #f0fff0; /* Light Apple Green */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #e6ffe6; /* Softer Light Green */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .login-container h1 {
     margin-bottom: 20px;
-    color: #008000; /* Apple Green */
+    color: #800080; /* Purple */
 }
 
 .login-container label {
     display: block;
     margin-bottom: 5px;
-    color: #006400; /* Dark Apple Green */
+    color: #008000; /* Apple Green */
 }
 
 .login-container input {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #008000;
+    border: 1px solid #800080; /* Purple */
     border-radius: 5px;
 }
 
 .login-container button {
     width: 100%;
     padding: 10px;
-    background-color: #008000;
+    background-color: #800080; /* Purple */
     color: white;
     border: none;
     border-radius: 5px;
@@ -39,11 +49,12 @@
 }
 
 .login-container button:hover {
-    background-color: #006400;
+    background-color: #4b0082; /* Darker Purple */
 }
 
 .error-message {
     color: red;
     margin-top: 10px;
     display: none;
+    font-size: 0.9em;
 }
