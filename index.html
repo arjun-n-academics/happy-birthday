@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Welcome Page</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
+    <div class="entry-container">
+        <h1>Welcome!</h1>
+        <p>Enter the Special Code to unlock your surprise:</p>
+        <form id="entryForm">
+            <input type="text" id="magicWord" name="magicWord" placeholder="Special Code" required>
+            <button type="submit">Enter</button>
         </form>
         <p id="error-message" class="error-message"></p>
     </div>
