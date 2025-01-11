@@ -44,12 +44,12 @@ body {
 /* Navigation Bar */
 .nav-bar {
     width: 100%;
-    position: fixed;
-    top: 70px; /* Positioned below the banner */
-    left: 0;
-    z-index: 1000;
     background-color: #f48fb1; /* Light Pink */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 1000;
 }
 
 .nav-bar ul {
@@ -58,6 +58,10 @@ body {
     margin: 0;
     padding: 10px 0;
     list-style-type: none;
+}
+
+.nav-bar ul li {
+    padding: 10px 0;
 }
 
 .nav-bar ul li a {
@@ -72,6 +76,14 @@ body {
 .nav-bar ul li a:hover, .nav-bar ul li a.active {
     background-color: #ff4081; /* Vibrant Pink */
     color: white;
+}
+
+/* Media Query for Vertical Navigation on Phones */
+@media (max-width: 600px) {
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Content Tile */
@@ -104,22 +116,23 @@ body {
 
 /* Name Tiles */
 .name-tiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    display: flex;
+    overflow-x: auto;
     gap: 10px;
-    justify-content: center;
+    padding: 10px 0;
 }
 
 .letter-tile {
     background-color: white;
-    width: 100%;
-    aspect-ratio: 2/3;
+    width: 100px;
+    height: 150px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    flex: 0 0 auto;
 }
 
 .letter-tile:hover {
@@ -135,8 +148,8 @@ body {
 }
 
 .photo img {
-    width: 50%;
-    height: auto;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-top: 10px;
 }
@@ -158,24 +171,4 @@ body {
 
 .letter-tile:hover .letter {
     color: #ff4081; /* Vibrant Pink */
-}
-
-/* Media Queries for Mobile */
-@media (max-width: 600px) {
-    .birthday-message h1 {
-        font-size: 1.8rem;
-    }
-
-    .letter {
-        font-size: 1.5rem;
-    }
-
-    .photo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .abbr {
-        font-size: 0.8rem;
-    }
 }
