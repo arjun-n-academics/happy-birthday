@@ -22,30 +22,34 @@ body {
 .entry-container h1 {
     margin-bottom: 20px;
     color: #800080; /* Purple */
+    font-size: 1.8rem; /* Slightly larger for mobile readability */
 }
 
 .entry-container p {
     color: #008000; /* Apple Green */
     margin-bottom: 15px;
+    font-size: 1rem; /* Comfortable size for mobile */
 }
 
 .entry-container input {
-    width: 100%;
+    width: 100%; /* Full width for mobile */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #800080; /* Purple */
     border-radius: 5px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .entry-container button {
-    width: 100%;
+    width: 60%; /* Slightly wider for easier tapping on mobile */
     padding: 10px;
     background-color: #800080; /* Purple */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem; /* Slightly larger for mobile */
 }
 
 .entry-container button:hover {
@@ -56,5 +60,5 @@ body {
     color: red;
     margin-top: 10px;
     display: none;
-    font-size: 0.9em;
+    font-size: 0.9rem; /* Adjusted for readability */
 }
