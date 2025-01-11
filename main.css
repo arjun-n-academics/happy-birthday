@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec; /* Soft Peach */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Allow vertical stacking */
+}
+
+/* Birthday Banner */
+.birthday-banner {
+    width: 100%;
+    background-color: #f48fb1; /* Light Pink */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100; /* Ensure it's above the nav bar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.birthday-banner span {
+    display: inline-block;
+    margin-left: 10px;
+    animation: float 2s infinite;
+}
+
+.birthday-banner span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.birthday-banner span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.birthday-banner span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.birthday-banner span:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+
+.birthday-banner span:nth-child(6) {
+    animation-delay: 0.4s;
+}
+
+.birthday-banner span:nth-child(7) {
+    animation-delay: 0.2s;
+}
+
+.birthday-banner span:nth-child(8) {
+    animation-delay: 0.0s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Navigation Bar */
+.nav-bar {
+    width: 100%;
+    position: fixed;
+    top: 70px; /* Positioned below the banner */
+    left: 0;
+    z-index: 1000;
+    background-color: #f48fb1; /* Light Pink */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+    list-style-type: none;
+}
+
+.nav-bar ul li {
+    margin: 0 20px;
+}
+
+.nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #f50057; /* Deep Pink */
+    color: white;
+}
+
+/* Content Tile */
+.content-tile {
+    background-color: #fff3e0; 
+    padding: 40px;
+    margin: 140px auto; /* Adjusted for navigation bar and banner space */
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Birthday Message */
+.birthday-message h1 {
+    font-size: 3rem;
+    color: #f48fb1; /* Light Pink */
+    animation: zoomIn 2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Name Tiles */
+.name-tiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px; /* Adds space between the tiles */
+}
+
+.letter-tile {
+    background-color: white; /* Soft Peach */
+    width: 130px;
+    height: 180px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.letter-tile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.letter {
+    font-size: 2.5rem;
+    color: #f48fb1; /* Light Pink */
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.photo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.abbr {
+    font-size: 1rem;
+    color: #f48fb1;
+    opacity: 0;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.letter-tile:hover .abbr {
+    opacity: 1;
+}
+
+.letter-tile:hover .letter {
+    color: #ff4081; /* Vibrant Pink */
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .content-tile {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .birthday-message h1 {
+        font-size: 2rem;
+    }
+
+    .letter-tile {
+        width: 100px;
+        height: 150px;
+    }
+}
+
+.nav-bar ul li a.active {
+    background-color: #ff4081; /* Vibrant Pink */
+    color: white;
+}
+
