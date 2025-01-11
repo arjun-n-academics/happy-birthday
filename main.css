@@ -116,15 +116,16 @@ body {
 
 /* Name Tiles */
 .name-tiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+    text-align: center;
     padding: 10px 0;
+    white-space: nowrap; /* Prevents line breaks */
 }
 
 .letter-tile {
+    display: inline-block; /* Ensures tiles are in the same horizontal line */
     background-color: white;
-    width: 100%;
+    width: 10%; /* Ensures each tile takes up 10% of the width */
+    margin: 0 5px; /* Adds spacing between tiles */
     height: 150px;
     text-align: center;
     border-radius: 10px;
@@ -132,6 +133,7 @@ body {
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    vertical-align: top;
 }
 
 .letter-tile:hover {
@@ -170,4 +172,11 @@ body {
 
 .letter-tile:hover .letter {
     color: #ff4081; /* Vibrant Pink */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 600px) {
+    .letter-tile {
+        width: 10%; /* Ensures each tile takes up 10% of the width on small screens */
+    }
 }
