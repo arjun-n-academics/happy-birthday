@@ -44,14 +44,14 @@
 }
 
 .letter-tile {
-    width: calc(12% - 8px); /* Increased width for better fitting */
+    width: calc(12% - 5px); /* Increased width for better fitting */
     height: calc(6vw + 15px); /* Adjust height based on screen size */
     background-color: #f48fb1;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 2px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     flex-shrink: 0; /* Prevent tiles from shrinking */
