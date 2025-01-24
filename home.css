@@ -17,30 +17,34 @@
     padding: 40px;
     background-color: white; /* Light gray background for welcome section */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Reduce margins for smaller screens */
+    max-width: 90%; /* Ensure section fits within screen width */
+    text-align: center;/* Light shadow for depth */
 }
 
 #welcome-title {
     font-size: 36px;
     color: #f48fb1; /* Deep teal for title */
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #big-tile {
     display: flex; /* Use flexbox for alignment */
     justify-content: center; /* Center align horizontally */
-    gap: 10px; /* Space between tiles */
-    margin-top: 20px;
-    font-size: 40px;
+    gap: 5px; /* Space between tiles */
+    margin-top: 10px;
+    font-size: 36px;
     font-weight: bold;
     flex-wrap: nowrap; /* Prevent wrapping to the next line */
     overflow-x: auto;  /* Allow wrapping on smaller screens */
 }
 
 .letter-tile {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
     background-color: #f48fb1;
     color: white;
     display: flex;
@@ -88,20 +92,25 @@
 }
 
 /* Media Queries for Mobile and Tablets */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+    #welcome-section {
+        padding: 10px; /* Further reduce padding on small devices */
+        margin: 10px auto;
+    }
     #welcome-title {
         font-size: 24px; /* Smaller title on mobile */
         margin-bottom: 10px;
     }
 
     #big-tile {
-        gap: 5px; /* Smaller gaps between tiles */
+        gap: 3px; /* Even smaller gap for tight spaces */
+        font-size: 28px; /* Smaller gaps between tiles */
     }
 
     .letter-tile {
-        width: 40px; /* Adjust tile size for smaller screens */
-        height: 40px;
-        font-size: 24px;
+        width: 35px; /* Adjust tile size for smaller screens */
+        height: 35px;
+        font-size: 18px;
     }
 
     #abbreviation-tile {
