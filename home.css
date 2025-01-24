@@ -37,7 +37,8 @@
     font-weight: bold;
     flex-wrap: nowrap; /* Prevent wrapping to the next line */
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100%;
+    width: calc(100% - 20px); /* Ensure the width fits without scrolling */
+    justify-content: space-between; /* Ensure letters are spaced evenly */
 }
 
 .letter-tile {
