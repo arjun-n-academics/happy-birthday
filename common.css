@@ -28,7 +28,6 @@ body, html {
     padding: 50px 20px; /* Spacious header with large padding */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    position: relative;
 }
 
 #header-title {
@@ -84,40 +83,28 @@ body, html {
     font-size: 14px;
     position: relative; /* Allows footer to be positioned at the bottom of the page */
     width: 100%;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow at top for depth */
 }
 
-/* Footer Text */
 #footer p {
     margin: 0;
     font-weight: 400;
 }
 
-/* Smooth Scroll for anchor links */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Styling for footer in all pages */
-#footer {
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow at top for depth */
-}
-
 /* Media Queries for Mobile and Tablets */
 @media (max-width: 768px) {
     #header-title {
-        font-size: 36px; /* Smaller title on mobile */
+        font-size: 32px; /* Smaller title on mobile */
     }
 
     #header-tagline {
-        font-size: 18px; /* Smaller tagline */
+        font-size: 16px; /* Smaller tagline */
     }
 
     #main-nav {
         flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px;
     }
 
     #main-nav a {
-        font-size: 16px; /* Slightly smaller text for mobile */
-        padding: 10px;
-    }
-}
+        font-size

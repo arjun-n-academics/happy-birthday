@@ -27,79 +27,6 @@
     margin-bottom: 20px;
 }
 
-#welcome-message {
-    font-size: 20px;
-    color: #f48fb1; /* Dark gray for text */
-    margin-bottom: 30px;
-    line-height: 1.6; /* Better readability */
-}
-
-#classroom-image {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-top: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Enroll Now Button */
-#enroll-button {
-    background-color: #006f6d; /* Soft gold button */
-    color: #fff; /* Dark teal text for the button */
-    font-size: 18px;
-    font-weight: 600;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    margin-top: 30px;
-    text-align: center;
-}
-
-/* Enroll Button Hover */
-#enroll-button:hover {
-    background-color: #f1c232; /* Dark teal on hover */
-    color: #006f6d; /* White text on hover */
-    transform: scale(1.05); /* Slight scale-up for engagement */
-}
-
-/* Footer */
-#footer {
-    background-color: #006f6d; /* Same deep teal for footer */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    width: 100%;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-#footer p {
-    margin: 0;
-}
-
-/* Media Queries for Mobile and Tablets */
-@media (max-width: 768px) {
-    #welcome-title {
-        font-size: 28px; /* Smaller title on mobile */
-    }
-
-    #welcome-message {
-        font-size: 18px; /* Smaller message */
-    }
-
-    #enroll-button {
-        font-size: 16px; /* Smaller button text on mobile */
-        padding: 12px 25px;
-    }
-
-    #classroom-image {
-        max-width: 90%; /* Adjust image size on mobile */
-        margin-top: 20px;
-    }
-}
-
-/* Big Tile Container */
 #big-tile {
     display: flex; /* Align letter tiles horizontally */
     justify-content: center;
@@ -107,9 +34,9 @@
     margin-top: 20px;
     font-size: 40px;
     font-weight: bold;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-/* Letter Tile */
 .letter-tile {
     width: 50px;
     height: 50px;
@@ -131,6 +58,8 @@
     padding: 5px;
     border-radius: 8px;
     visibility: hidden; /* Hide initially */
+    word-wrap: break-word;
+    max-width: 80%; /* Prevent overflow on mobile */
 }
 
 #abbreviation-tile.hidden {
@@ -139,4 +68,51 @@
 
 #abbreviation-tile {
     visibility: visible;
+}
+
+/* Footer */
+#footer {
+    background-color: #006f6d; /* Deep teal for footer */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#footer p {
+    margin: 0;
+}
+
+/* Media Queries for Mobile and Tablets */
+@media (max-width: 768px) {
+    #welcome-title {
+        font-size: 24px; /* Smaller title on mobile */
+        margin-bottom: 10px;
+    }
+
+    #big-tile {
+        gap: 5px; /* Smaller gaps between tiles */
+    }
+
+    .letter-tile {
+        width: 40px; /* Adjust tile size for smaller screens */
+        height: 40px;
+        font-size: 24px;
+    }
+
+    #abbreviation-tile {
+        font-size: 14px; /* Smaller text for abbreviations */
+    }
+
+    #main-content {
+        padding: 20px 10px;
+        margin: 20px auto;
+    }
+
+    #footer {
+        padding: 15px;
+        font-size: 12px;
+    }
 }
