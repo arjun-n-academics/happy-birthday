@@ -39,13 +39,14 @@
     font-size: 36px;
     font-weight: bold;
     flex-wrap: nowrap; /* Keep all tiles on one line */
-    overflow-x: auto; /* Prevent wrapping on smaller screens */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Ensures full width utilization */
 }
 
 .letter-tile {
-    width: 35px; /* Reduced tile size to fit all letters */
+    width: calc(100% / 8 - 10px); /* Dynamically adjusts width to fit 8 letters */
     height: 35px;
-    font-size: 18px; /* Reduced font size for smaller screens */
+    font-size: 18px; /* Adjust font size */
     background-color: #f48fb1;
     color: white;
     display: flex;
@@ -110,7 +111,7 @@
     }
 
     .letter-tile {
-        width: 30px; /* Adjust tile size for smaller screens */
+        width: calc(100% / 8 - 5px); /* Adjust tile width to fit in mobile screens */
         height: 30px;
         font-size: 16px; /* Reduce font size for smaller screens */
     }
