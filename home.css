@@ -31,17 +31,18 @@
 #big-tile {
     display: flex; /* Use flexbox for alignment */
     justify-content: flex-start; /* Align letters to the left */
-    gap: calc(5px + 0.5vw); /* Adjusted gap between tiles */
+    gap: calc(5px + 0.5vw); /* Reduced gap between tiles */
     margin-top: 20px;
     font-size: calc(24px + 2vw); /* Font size adapts to viewport width */
     font-weight: bold;
     flex-wrap: nowrap; /* Prevent wrapping to the next line */
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: calc(100% - 30px); /* Adjust the width to give more space for tiles */
+    width: 100%; /* Ensure the width fits without scrolling */
+    justify-content: flex-start; /* Ensure letters are spaced evenly */
 }
 
 .letter-tile {
-    width: calc(10% - 5px); /* Dynamic width based on the screen size */
+    width: calc(10% - 5px); /* Slightly increased width for better fitting */
     height: calc(5vw + 20px); /* Adjust height based on screen size */
     background-color: #f48fb1;
     color: white;
@@ -97,11 +98,11 @@
     }
 
     #big-tile {
-        gap: calc(3px + 1vw); /* Adjusted gap for smaller screens */
+        gap: calc(3px + 0.5vw); /* Even smaller gap for smaller screens */
     }
 
     .letter-tile {
-        width: calc(12% - 3px); /* Adjust tile width for smaller screens */
+        width: calc(12% - 5px); /* Adjust tile width for smaller screens */
         height: calc(6vw + 10px);
         font-size: calc(14px + 2vw); /* Adjust font size */
     }
