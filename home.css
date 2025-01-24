@@ -108,8 +108,8 @@
     }
 
     .letter-tile {
-        width: 35px; /* Adjust tile size for smaller screens */
-        height: 35px;
+        width: 30px; /* Adjust tile size for smaller screens */
+        height: 30px;
         font-size: 18px;
     }
 
