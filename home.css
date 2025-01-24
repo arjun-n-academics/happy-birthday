@@ -3,7 +3,7 @@
 /* Main Content */
 #main-content {
     flex-grow: 1;
-    background-color: #fff3e0; /* Light background */
+    background-color: #fff3e0; /* White background for main content */
     padding: 40px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     border-radius: 10px;
@@ -17,36 +17,32 @@
     padding: 40px;
     background-color: white; /* Light gray background for welcome section */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 90%; /* Ensure section fits within screen width */
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 #welcome-title {
-    font-size: 36px;
-    color: #f48fb1; /* Pink for title */
+    font-size: calc(24px + 2vw); /* Adjust title size based on viewport width */
+    color: #f48fb1; /* Deep teal for title */
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* Big Tile for Name */
 #big-tile {
     display: flex; /* Use flexbox for alignment */
     justify-content: center; /* Center align horizontally */
-    gap: 5px; /* Space between tiles */
-    margin-top: 10px;
-    font-size: 36px;
+    gap: calc(10px + 1vw); /* Dynamic gap between tiles */
+    margin-top: 20px;
+    font-size: calc(24px + 2vw); /* Font size adapts to viewport width */
     font-weight: bold;
-    flex-wrap: nowrap; /* Keep all tiles on one line */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100%; /* Ensures full width utilization */
+    width: 100%;
 }
 
 .letter-tile {
-    width: calc(100% / 8 - 10px); /* Dynamically adjusts width to fit 8 letters */
-    height: 35px;
-    font-size: 18px; /* Adjust font size */
+    width: calc(10% - 10px); /* Dynamic width based on the screen size */
+    height: calc(5vw + 20px); /* Adjust height based on screen size */
     background-color: #f48fb1;
     color: white;
     display: flex;
@@ -84,7 +80,7 @@
     color: #fff;
     padding: 20px;
     text-align: center;
-    font-size: 14px;
+    font-size: calc(12px + 0.5vw); /* Font size adjusts to screen width */
     width: 100%;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
@@ -94,30 +90,24 @@
 }
 
 /* Media Queries for Mobile and Tablets */
-@media (max-width: 480px) {
-    #welcome-section {
-        padding: 10px; /* Further reduce padding on small devices */
-        margin: 10px auto;
-    }
-
+@media (max-width: 768px) {
     #welcome-title {
-        font-size: 24px; /* Smaller title on mobile */
+        font-size: calc(18px + 2vw); /* Smaller title on mobile */
         margin-bottom: 10px;
     }
 
     #big-tile {
-        gap: 3px; /* Reduce gap for smaller screens */
-        font-size: 28px; /* Adjust font size */
+        gap: calc(5px + 2vw); /* Adjust gap for smaller screens */
     }
 
     .letter-tile {
-        width: calc(100% / 8 - 5px); /* Adjust tile width to fit in mobile screens */
-        height: 30px;
-        font-size: 16px; /* Reduce font size for smaller screens */
+        width: calc(12% - 5px); /* Adjust tile width for smaller screens */
+        height: calc(6vw + 10px);
+        font-size: calc(14px + 2vw); /* Adjust font size */
     }
 
     #abbreviation-tile {
-        font-size: 14px; /* Smaller text for abbreviations */
+        font-size: calc(12px + 1vw); /* Smaller text for abbreviations */
     }
 
     #main-content {
@@ -127,6 +117,6 @@
 
     #footer {
         padding: 15px;
-        font-size: 12px;
+        font-size: calc(12px + 0.5vw);
     }
 }
