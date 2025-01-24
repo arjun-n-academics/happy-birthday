@@ -44,7 +44,7 @@
 }
 
 .letter-tile {
-    width: calc(12% - 5px); /* Increased width for better fitting */
+    width: calc(12% - 3px); /* Increased width for better fitting */
     height: calc(6vw + 15px); /* Adjust height based on screen size */
     background-color: #f48fb1;
     color: white;
