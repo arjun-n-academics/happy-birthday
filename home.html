@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <header id="main-header">
+        <h1 id="header-title">Happy Birthday</h1>
+        <p id="header-tagline">Dhanusha!</p>
+        <nav id="main-nav">
+            <a href="home.html" id="home-link" class="active">Wish</a>
+            <a href="famous_people.html" id="about-link">Famous Personalities</a>
+            <a href="important_event.html" id="courses-link">Important Events</a>
+            <a href="contact.html" id="contact-link">Secret Wish</a>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section id="welcome-section">
+            <h2 id="welcome-title">Happy Birthday</h2>
+            <div id="big-tile">
+                <div class="letter-tile" id="letter-1" data-letter="D">D</div>
+                <div class="letter-tile" id="letter-2" data-letter="H">H</div>
+                <div class="letter-tile" id="letter-3" data-letter="A">A</div>
+                <div class="letter-tile" id="letter-4" data-letter="N">N</div>
+                <div class="letter-tile" id="letter-5" data-letter="U">U</div>
+                <div class="letter-tile" id="letter-6" data-letter="S">S</div>
+                <div class="letter-tile" id="letter-7" data-letter="H">H</div>
+                <div class="letter-tile" id="letter-8" data-letter="A">A</div>
+            </div>
+        </section>
+        <div id="abbreviation-tile" class="hidden"></div>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2025 Happy Birthday Wishes</p>
+    </footer>
+
+    <script>
+        // Speak out "Happy Birthday" when the page loads
+        window.onload = function() {
+            const speech = new SpeechSynthesisUtterance("Happy Birthday");
+            speechSynthesis.speak(speech);
+        };
+
+        // Abbreviation tile functionality
+        const abbreviationTile = document.getElementById('abbreviation-tile');
+        const letterTiles = document.querySelectorAll('.letter-tile');
+
+        // Abbreviations for each letter
+        const abbreviations = {
+            D: 'Delightful',
+            H: 'Honest',
+            A: 'Amazing',
+            N: 'Noble',
+            U: 'Unique',
+            S: 'Strong',
+            H: 'Humble',
+            A: 'Artistic'
+        };
+
+        letterTiles.forEach(tile => {
+            tile.addEventListener('mouseover', function() {
+                const letter = tile.dataset.letter;
+                abbreviationTile.textContent = abbreviations[letter] || '';
+                abbreviationTile.classList.remove('hidden');
+                abbreviationTile.style.top = `${tile.offsetTop + tile.offsetHeight + 5}px`; // Position below the tile
+                abbreviationTile.style.left = `${tile.offsetLeft}px`;
+            });
+
+            tile.addEventListener('mouseout', function() {
+                abbreviationTile.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
